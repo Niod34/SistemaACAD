@@ -1,0 +1,214 @@
+/* Resetando margens, padding, box-sizing e definindo fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não afetem o tamanho do elemento */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container principal para o layout de login */
+.container-login {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    display: flex; /* Flexbox para distribuição das caixas */
+}
+
+/* Caixa da imagem, ocupando metade da tela */
+.img-box {
+    width: 50%; 
+    height: 100%;
+    padding: 20px;
+}
+
+/* Imagem dentro da caixa de imagem, sem distorção */
+.img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Caixa de conteúdo (formulário) à direita, também ocupa metade da tela */
+.content-box {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 50%;
+    height: 100%;
+}
+
+/* Formulário, limitado a 50% da largura da caixa de conteúdo */
+.content-box .form-box {
+    width: 50%;
+}
+
+/* Estilo para a lista de ícones (redes sociais ou outros métodos de login) */
+.content-box .form-box .ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para cada item da lista (ícones de login social) */
+.content-box .form-box .ul li {
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s; /* Transição suave no efeito hover */
+}
+
+/* Efeito visual quando o mouse passa sobre os ícones */
+.content-box .form-box .ul li:hover {
+    background: #e4e4e4;
+}
+
+/* Ajuste de tamanho para as imagens dos ícones */
+.form-box .ul li img {
+    width: 40px;
+}
+
+/* Estilo para o título principal do formulário */
+.content-box .form-box h2 {
+    color: #32324f;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos para os campos de input */
+.content-box .form-box .input-box {
+    margin-bottom: 20px;
+}
+
+/* Estilos para os inputs, com borda arredondada e fundo claro */
+.content-box .form-box .input-box input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    font-size: 17px;
+    color: #32324f;
+    background-color: #ecf2f7;
+    border-radius: 5px;
+}
+
+/* Estilos para os rótulos dos inputs */
+.content-box .form-box .input-box span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #32324f;
+    font-weight: 400;
+}
+
+/* Cor do texto de placeholder nos inputs */
+.content-box .form-box .input-box input::placeholder {
+    color: #a9adb6;
+}
+
+/* Estilo para o botão de envio (submit), com transição suave */
+.content-box .form-box .input-box input[type=submit] {
+    background: #F8D347;
+    color: black;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Efeito de hover no botão de envio */
+.content-box .form-box .input-box input[type=submit]:hover {
+    background: #F8D347;
+}
+
+/* Estilos para a área de "lembrar de login" (checkbox e link) */
+.content-box .form-box .remember {
+    margin-bottom: 20px;
+    color: #32324f;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para o link de "lembrar senha" */
+.content-box .form-box .remember a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Efeito de hover no link de "lembrar senha" */
+.content-box .form-box .remember a:hover {
+    color: black;
+}
+
+/* Estilo para o texto de aviso ou outra informação */
+.content-box .form-box .input-box p {
+    color: #32324f;
+}
+
+/* Estilo para o link dentro do aviso */
+.content-box .form-box .input-box p a {
+    color: black;
+}
+
+/* Efeito de hover no link dentro do aviso */
+.content-box .form-box .input-box p a:hover {
+    color: #F8D347;
+}
+
+/* Estilo para o subtítulo dentro do formulário */
+.content-box .form-box h3 {
+    color: #607d8b;
+    text-decoration: none;
+    margin: 40px 0 15px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Media query para telas menores que 868px */
+@media (max-width:868px) {
+    /* Esconde a imagem à esquerda em telas pequenas */
+    .container-login .img-box {
+        display: none;
+    }
+    /* Ajusta a largura da caixa de conteúdo para ocupar 100% */
+    .container-login .content-box {
+        width: 100%;
+    }
+    /* Ajuste de padding e margem para o formulário em telas pequenas */
+    .container-login .content-box .form-box {
+        width: 100%;
+        padding: 40px;
+        background: white;
+        margin: 50px;
+    }
+    /* Ajusta a margem do subtítulo */
+    .container-login .content-box .form-box h3 {
+        margin: 30px 0 10px;
+    }
+}
+
+/* Media query para telas menores que 450px */
+@media (max-width:450px) {
+    /* Permite que os itens "lembrar de login" se reorganizem em telas muito pequenas */
+    .container-login .content-box .form-box .remember {
+        flex-wrap: wrap;
+    }
+    /* Adiciona margem superior aos links em telas muito pequenas */
+    .container-login .content-box .form-box .remember a {
+        margin-top: 20px;
+    }
+}

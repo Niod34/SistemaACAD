@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Resetando margens e padding de todos os elementos para evitar inconsistências entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Fonte padrão para o site */
+}
+
+/* Corpo da página com o layout principal */
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    color: black; /* Cor do texto */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 1vw;
+}
+
+/* Cabeçalho fixo no topo da página */
+header {
+    display: flex;
+    justify-content: space-between; /* Alinha o conteúdo da esquerda para a direita */
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background-color: #F8D347; /* Cor de fundo amarela */
+    color: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra do cabeçalho */
+    position: absolute; /* Cabeçalho fixo no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+/* Barra de navegação */
+.nav1 {
+    display: flex;
+    gap: 3rem; /* Espaçamento entre os links */
+    margin-left: auto;
+    margin-right: 5rem; /* Ajusta a margem direita */
+    font-size: 1.5rem;
+}
+
+/* Link do logo com efeito de hover */
+.GOT a {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s ease; /* Transição suave ao alterar o tamanho do logo */
+    border-bottom: 3px solid transparent; /* Linha invisível para efeito hover */
+    margin: 0;
+}
+
+.GOT a:hover {
+    font-size: 3rem; /* Aumenta o tamanho do logo ao passar o mouse */
+}
+
+/* Título da página */
+h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left; /* Alinha o título à esquerda */
+}
+
+/* Botões com a classe 'a' */
+button.a {
+    background-color: #FFD700; /* Cor de fundo amarela */
+    color: black;
+    border: black 1px solid;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+button.a:hover {
+    background-color: #E6C200; /* Escurece a cor ao passar o mouse */
+}
+
+/* Container principal para centralizar os conteúdos */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Container da tabela, centraliza a tabela na página */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centraliza a tabela horizontalmente */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Tabela com comportamento fixo e centralizado */
+table {
+    margin-top: 5vh;
+    width: 95%; /* Largura da tabela com 95% da tela */
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+    table-layout: fixed; /* Previne que a tabela se expanda além do tamanho da tela */
+}
+
+/* Células da tabela com padding e bordas */
+th, td {
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    width: 14.28%; /* Define largura fixa para as colunas */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    overflow-wrap: break-word; /* Garante que o conteúdo das células se ajuste */
+}
+
+/* Cabeçalho da tabela */
+th {
+    background-color: #FFD700; /* Cor de fundo amarela para as células de cabeçalho */
+    color: black; /* Cor do texto no cabeçalho */
+}
+
+/* Linhas pares da tabela */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}
+
+/* Linhas da tabela ao passar o mouse */
+tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre a linha */
+}
+
+/* Botão de editar com cor verde */
+.btn-editar {
+    background-color: #5CB85C; /* Cor verde para editar */
+    color: white;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.btn-editar:hover {
+    background-color: #45a049; /* Escurece o verde ao passar o mouse */
+}
+
+/* Botão de excluir com cor vermelha */
+.btn-excluir {
+    background-color: #D9534F; /* Cor vermelha para excluir */
+    color: white;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.btn-excluir:hover {
+    background-color: #d32f2f; /* Escurece o vermelho ao passar o mouse */
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Resetando margens, padding e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo geral do body */
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    color: black;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos de forma vertical */
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 1vw;
+}
+
+/* Cabeçalho fixo no topo */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e navegação */
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background-color: #F8D347;
+    color: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para dar destaque */
+    position: absolute; /* Fixa no topo da página */
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Navegação do cabeçalho */
+.nav1 {
+    display: flex;
+    gap: 3rem; /* Espaçamento entre os itens do menu */
+    margin-left: auto; /* Empurra a navegação para a direita */
+    margin-right: 5rem;
+    font-size: 1.5rem;
+}
+
+/* Estilo do logo */
+.GOT a {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s ease; /* Suaviza a transição de tamanho no hover */
+    border-bottom: 3px solid transparent; /* Efeito visual ao passar o mouse */
+}
+
+.GOT a:hover {
+    font-size: 3rem; /* Aumenta o tamanho do logo ao passar o mouse */
+}
+
+/* Títulos */
+h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+button.a {
+    background-color: #FFD700;
+    color: black;
+    border: black 1px solid;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+button.a:hover {
+    background-color: #E6C200; /* Alteração de cor no hover */
+}
+
+/* Estilo da tabela */
+table {
+    width: 95%; /* Tabela ocupa quase toda a largura */
+    margin-top: 5vh; /* Distância do topo */
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+    table-layout: fixed; /* Garante que as células tenham largura fixa */
+}
+
+/* Células da tabela */
+th, td {
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    width: 14.28%; /* Aproximadamente 1/7 da largura da tabela */
+    word-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+    overflow-wrap: break-word; /* Alternativa para garantir a quebra de palavras */
+}
+
+/* Cabeçalho da tabela */
+th {
+    background-color: #FFD700;
+    color: black;
+}
+
+/* Linhas alternadas da tabela */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efeito de hover nas linhas */
+tr:hover {
+    background-color: #f1f1f1; /* Destaca a linha ao passar o mouse */
+}
