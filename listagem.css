@@ -16,28 +16,30 @@ body {
     overflow-x: hidden;
     color: black;
     display: flex;
-    flex-direction: column; /* Organiza os elementos de forma vertical */
+    flex-direction: column; 
     justify-content: flex-start;
     align-items: flex-start;
     min-height: 100vh;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ebe8e8;
     margin-left: 1vw;
+
 }
 
-/* Cabeçalho fixo no topo */
+/* Cabeçalho fixo no topo sem margem */
 header {
     display: flex;
-    justify-content: space-between; /* Espaça logo e navegação */
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
     width: 100%;
     background-color: #F8D347;
     color: #FFFFFF;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para dar destaque */
-    position: absolute; /* Fixa no topo da página */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
     top: 0;
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    left: 0; /* Garante que o header fique alinhado à esquerda */
+    z-index: 1000;
 }
 
 /* Navegação do cabeçalho */

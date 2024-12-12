@@ -37,32 +37,31 @@ header {
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
-/*  botão "voltar" */
-.voltar {
+/* Botão de Voltar */
+.btn-voltar {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     background-color: #F8D347;
     color: black;
-    border: 1px solid #F8D347;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border: none;
     border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease; /* Efeito de transição suave */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove sublinhado */
 }
 
-/* Efeito do botão "voltar" ao passar o mouse */
-.voltar:hover {
+/* Hover no botão de Voltar */
+.btn-voltar:hover {
     background-color: #F8C747;
-    color: white;
-    border-color: #F8C747;
 }
 
-/* Efeito de foco no botão "voltar" */
-.voltar:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(248, 212, 71, 0.5); /* Sombra ao focar no botão */
-}
+
+
+
 
 /* navegação no cabeçalho */
 .nav1 {

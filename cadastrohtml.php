@@ -64,15 +64,7 @@ require 'conexao.php';
     </form>
 </main>
 
-<div class="buttons-container">
-    <!-- Links para outras ações (Listagem e Editar/Excluir) -->
-    <a href="listagem.php">
-        <button class="uivers">Listagem</button>
-    </a>
-    <a href="editarhtml.php">
-        <button class="uivers">Editar/Excluir</button>
-    </a>
-</div>
+
 
 <footer>
     <!-- Rodapé com informações sobre o autor -->

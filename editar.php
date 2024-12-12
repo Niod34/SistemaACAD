@@ -73,13 +73,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
 
-<div>
-    <!-- Link para voltar à página de cadastro -->
-    <a href="cadastrohtml.php">
-            <button class="voltar">
-                < Voltar</button>
-        </a>
+<header>
+    <!-- Botão de Voltar -->
+    <a href="javascript:history.back()" class="btn-voltar">< Voltar</a>
+    
+   
     </div>
+</header>
+
+
 
     <!-- Formulário de edição de aluno -->
     <main class="container">
@@ -120,6 +122,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="uiverse">Atualizar</button>
         </form>
     </main>
+
+    <footer>
+    <!-- Rodapé com informações sobre o autor -->
+    <p>&copy; 2024 Saulo Gabriel | Developer</p>
+    <a href="https://github.com/Niod34" target="_blank">
+        <i class="fab fa-github"></i> GitHub: Niod34
+    </a>
+</footer>
 </body>
 
 </html>

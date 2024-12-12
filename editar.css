@@ -21,7 +21,7 @@ body {
     align-items: flex-start;
     min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
     padding: 20px;
-    background-color: #fff;
+    background-color: #ebe8e8;
     margin-left: 1vw;
 }
 
@@ -165,3 +165,5 @@ tr:hover {
 .btn-excluir:hover {
     background-color: #d32f2f; /* Escurece o vermelho ao passar o mouse */
 }
+
+

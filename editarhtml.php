@@ -13,7 +13,7 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="editar.css">
     <title>Editar/Deletar</title>
 </head>
 
@@ -85,7 +85,7 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
             </table>
         </div>
     </main>
-
+    
 </body>
 
 </html>
