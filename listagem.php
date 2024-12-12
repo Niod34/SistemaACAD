@@ -1,14 +1,12 @@
 <?php
-
 // Conectando ao banco de dados
 require 'conexao.php';
 
-// Realiza a consulta para recuperar todos os alunos
+// Realiza a consulta para recuperar todos os alunos, incluindo o campo "vezes_na_semana"
 $sql = $pdo->query('SELECT * FROM alunos');
 
 // Armazena os resultados da consulta em um array associativo
 $farmacia = $sql->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +20,7 @@ $farmacia = $sql->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 <header>
-    <!--  links de navegação -->
+    <!-- Links de navegação -->
     <aside class="GOT"> <a href="login.php"> 🏋️‍♂️ Niod's Fit</a></aside>
 
     <nav class="nav1">
@@ -46,11 +44,12 @@ $farmacia = $sql->fetchAll(PDO::FETCH_ASSOC);
         <tr>
             <!-- Cabeçalho da tabela -->
             <th scope="col">Nome</th>
-            <th scope="col">Data Nascimento</th>
+            <th scope="col">Data de Nascimento</th>
             <th scope="col">Email</th>
             <th scope="col">Telefone</th>
             <th scope="col">Endereço</th>
             <th scope="col">Sexo</th>
+            <th scope="col">Plano</th> <!-- Nova coluna para "Vezes na Semana" -->
         </tr>
     </thead>
     <tbody>
@@ -65,6 +64,7 @@ $farmacia = $sql->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo htmlspecialchars($produto["telefone"]); ?></td>
                 <td><?php echo htmlspecialchars($produto["endereco"]); ?></td>
                 <td><?php echo htmlspecialchars($produto["sexo"]); ?></td>
+                <td><?php echo htmlspecialchars($produto["vezes_por_semana"]); ?></td> <!-- Exibe o valor de "Vezes na Semana" -->
             </tr>
         <?php endforeach; ?>
     </tbody>

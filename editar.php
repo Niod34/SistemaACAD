@@ -31,11 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $telefone = $_POST['telefone'];
     $endereco = $_POST['endereco'];
     $sexo = $_POST['sexo'];
+    $vezes_por_semana = $_POST['vezes_por_semana']; // Captura o novo campo
 
     // Query para atualizar os dados do aluno no banco
     $updateQuery = "
         UPDATE alunos 
-        SET nome = :nome, data_nascimento = :data_nascimento, email = :email, telefone = :telefone, endereco = :endereco, sexo = :sexo 
+        SET nome = :nome, data_nascimento = :data_nascimento, email = :email, telefone = :telefone, endereco = :endereco, sexo = :sexo, vezes_por_semana = :vezes_por_semana
         WHERE id = :id
     ";
 
@@ -47,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updateStmt->bindValue(':telefone', $telefone);
     $updateStmt->bindValue(':endereco', $endereco);
     $updateStmt->bindValue(':sexo', $sexo);
+    $updateStmt->bindValue(':vezes_por_semana', $vezes_por_semana); // Vinculando o novo campo
     $updateStmt->bindValue(':id', $idAluno); // Vinculando o ID do aluno
 
     // Executando a query de atualização
@@ -76,12 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header>
     <!-- Botão de Voltar -->
     <a href="javascript:history.back()" class="btn-voltar">< Voltar</a>
-    
-   
-    </div>
 </header>
-
-
 
     <!-- Formulário de edição de aluno -->
     <main class="container">
@@ -118,6 +115,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="Outro" <?php echo ($aluno['sexo'] == 'Outro') ? 'selected' : ''; ?>>Outro</option>
             </select><br><br>
 
+            <!-- Campo para Vezes na Semana -->
+<label for="vezes_por_semana">Plano:</label><br>
+<select name="vezes_por_semana" id="vezes_por_semana" class="form" required>
+    <option value="" disabled selected>Selecione a quantidade de vezes</option>
+    <option value="1" <?php echo $aluno['vezes_por_semana'] == 1 ? 'selected' : ''; ?>>1 vez</option>
+    <option value="2" <?php echo $aluno['vezes_por_semana'] == 2 ? 'selected' : ''; ?>>2 vezes</option>
+    <option value="3" <?php echo $aluno['vezes_por_semana'] == 3 ? 'selected' : ''; ?>>3 vezes</option>
+    <option value="4" <?php echo $aluno['vezes_por_semana'] == 4 ? 'selected' : ''; ?>>4 vezes</option>
+    <option value="5" <?php echo $aluno['vezes_por_semana'] == 5 ? 'selected' : ''; ?>>5 vezes</option>
+    <option value="6" <?php echo $aluno['vezes_por_semana'] == 6 ? 'selected' : ''; ?>>6 vezes</option>
+    <option value="7" <?php echo $aluno['vezes_por_semana'] == 7 ? 'selected' : ''; ?>>7 vezes</option>
+</select><br><br>
+    
             <!-- Botão para submeter o formulário -->
             <button type="submit" class="uiverse">Atualizar</button>
         </form>

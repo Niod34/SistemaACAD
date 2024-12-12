@@ -26,13 +26,13 @@
                     <!-- Campo de entrada para o nome de usuário (email) -->
                     <div class="input-box">
                         <span>Usuário</span>
-                        <input type="email" name="usuario" placeholder="@mail.com" required> <!-- O 'required' garante que o campo seja preenchido -->
+                        <input type="email" name="usuario" placeholder="@mail.com"  required minlength="16" required maxlength="40"> <!-- O 'required' garante que o campo seja preenchido -->
                     </div>
 
                     <!-- Campo de entrada para a senha -->
                     <div class="input-box">
                         <span>Senha</span>
-                        <input type="password" name="senha" placeholder="Senha" required minlength="8"> <!-- Senha oculta com type="password" -->
+                        <input type="password" name="senha" placeholder="Senha" required minlength="8" required maxlength="16"> <!-- Senha oculta com type="password" -->
                     </div>
 
                     <!-- Opção para lembrar do usuário -->

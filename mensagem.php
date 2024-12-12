@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cadastrar.css">
+</head>
+<body>
+  
+
 <?php
 // Verifica se existe uma mensagem na URL, caso contrário, define como uma string vazia
 $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
@@ -12,3 +23,6 @@ echo "<script>
         }, 3000); // Aguarda 3000 milissegundos (3 segundos) antes de redirecionar
       </script>";
 ?>
+
+</body>
+</html>

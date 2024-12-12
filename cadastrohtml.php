@@ -59,6 +59,18 @@ require 'conexao.php';
             <option value="Outro">Outro</option>
         </select><br>
 
+        <label for="vezes_por_semana">Plano:</label>
+<select name="vezes_por_semana" id="vezes_por_semana">
+    <option value="1 vez">1 vez na semana (R$ 40)</option>
+    <option value="2 vezes">2 vezes na semana (R$ 50)</option>
+    <option value="3 vezes">3 vezes na semana (R$ 60)</option>
+    <option value="4 vezes">4 vezes na semana (R$ 70)</option>
+    <option value="5 vezes">5 vezes na semana (R$ 80)</option>
+    <option value="6 vezes">6 vezes na semana (R$ 90) </option>
+    <option value="7 vezes">7 vezes na semana (R$ 100)</option>
+</select>
+
+
         <!-- Botão para enviar o formulário -->
         <button class="uiverse">Cadastrar</button>
     </form>

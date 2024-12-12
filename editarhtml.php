@@ -2,7 +2,7 @@
 // Inclui a conexão com o banco de dados
 require 'conexao.php';
 
-// Recuperando todos os alunos do banco de dados
+// Recuperando todos os alunos do banco de dados, incluindo o campo 'vezes_na_semana'
 $sql = $pdo->query('SELECT * FROM alunos');
 $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontrados em um array
 ?>
@@ -33,8 +33,7 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
         <!-- Título da página e botão de voltar -->
         <h1>Editar/Deletar Alunos</h1>
         <a href="cadastrohtml.php">
-            <button class="a">
-                < Voltar</button>
+            <button class="a">< Voltar</button>
         </a>
     </div>
 
@@ -51,6 +50,7 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
                         <th scope="col">Telefone</th>
                         <th scope="col">Endereço</th>
                         <th scope="col">Sexo</th>
+                        <th scope="col">Plano</th> <!-- Nova coluna para "Vezes na Semana" -->
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
@@ -66,6 +66,7 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
                             <td><?php echo htmlspecialchars($aluno["telefone"]); ?></td>
                             <td><?php echo htmlspecialchars($aluno["endereco"]); ?></td>
                             <td><?php echo htmlspecialchars($aluno["sexo"]); ?></td>
+                            <td><?php echo htmlspecialchars($aluno["vezes_por_semana"]); ?> </td> <!-- Exibe o valor de "Vezes na Semana" -->
                             <td>
                                 <!-- Formulário de edição (passando o ID do aluno via GET) -->
                                 <form action="editar.php" method="get" style="display:inline;">
