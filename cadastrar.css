@@ -209,15 +209,38 @@ button:active {
     gap: 10px;
 }
 
+
 /* Estilos para telas menores */
 @media (max-width: 768px) {
+    /* Ajustes no formulário */
     .form-cadastro {
         padding: 1.5rem;
     }
 
+    /* Ajustes no cabeçalho */
     header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .nav1 {
+        gap: 2rem;
+        margin-right: 1rem;
+    }
+
+    /* Redução da largura do formulário */
+    .form-cadastro {
+        max-width: 90%; /* Ocupa mais largura em dispositivos pequenos */
+    }
+
+    /* Ajuste nas fontes */
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input, select, button.uiverse {
+        font-size: 0.9rem;
+        padding: 0.7rem;
     }
 }
 
