@@ -69,16 +69,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastrar.css">
+    <link rel="stylesheet" href="edit.css">
     <title>Editar Aluno</title>
 </head>
 
 <body>
 
-<header>
-    <!-- Botão de Voltar -->
-    <a href="javascript:history.back()" class="btn-voltar">< Voltar</a>
-</header>
+    <header>
+        <!-- Botão de Voltar -->
+        <a href="javascript:history.back()" class="btn-voltar">
+            < Voltar</a>
+    </header>
 
     <!-- Formulário de edição de aluno -->
     <main class="container">
@@ -116,30 +117,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </select><br><br>
 
             <!-- Campo para Vezes na Semana -->
-<label for="vezes_por_semana">Plano:</label><br>
-<select name="vezes_por_semana" id="vezes_por_semana" class="form" required>
-    <option value="" disabled selected>Selecione a quantidade de vezes</option>
-    <option value="1" <?php echo $aluno['vezes_por_semana'] == 1 ? 'selected' : ''; ?>>1 vez</option>
-    <option value="2" <?php echo $aluno['vezes_por_semana'] == 2 ? 'selected' : ''; ?>>2 vezes</option>
-    <option value="3" <?php echo $aluno['vezes_por_semana'] == 3 ? 'selected' : ''; ?>>3 vezes</option>
-    <option value="4" <?php echo $aluno['vezes_por_semana'] == 4 ? 'selected' : ''; ?>>4 vezes</option>
-    <option value="5" <?php echo $aluno['vezes_por_semana'] == 5 ? 'selected' : ''; ?>>5 vezes</option>
-    <option value="6" <?php echo $aluno['vezes_por_semana'] == 6 ? 'selected' : ''; ?>>6 vezes</option>
-    <option value="7" <?php echo $aluno['vezes_por_semana'] == 7 ? 'selected' : ''; ?>>7 vezes</option>
-</select><br><br>
-    
+            <label for="vezes_por_semana">Plano:</label><br>
+            <select name="vezes_por_semana" id="vezes_por_semana" class="form" required>
+                <option value="" disabled selected>Selecione a quantidade de vezes</option>
+                <option value="1" <?php echo $aluno['vezes_por_semana'] == 1 ? 'selected' : ''; ?>>1 vez</option>
+                <option value="2" <?php echo $aluno['vezes_por_semana'] == 2 ? 'selected' : ''; ?>>2 vezes</option>
+                <option value="3" <?php echo $aluno['vezes_por_semana'] == 3 ? 'selected' : ''; ?>>3 vezes</option>
+                <option value="4" <?php echo $aluno['vezes_por_semana'] == 4 ? 'selected' : ''; ?>>4 vezes</option>
+                <option value="5" <?php echo $aluno['vezes_por_semana'] == 5 ? 'selected' : ''; ?>>5 vezes</option>
+                <option value="6" <?php echo $aluno['vezes_por_semana'] == 6 ? 'selected' : ''; ?>>6 vezes</option>
+                <option value="7" <?php echo $aluno['vezes_por_semana'] == 7 ? 'selected' : ''; ?>>7 vezes</option>
+            </select><br><br>
+
             <!-- Botão para submeter o formulário -->
             <button type="submit" class="uiverse">Atualizar</button>
         </form>
     </main>
 
     <footer>
-    <!-- Rodapé com informações sobre o autor -->
-    <p>&copy; 2024 Saulo Gabriel | Developer</p>
-    <a href="https://github.com/Niod34" target="_blank">
-        <i class="fab fa-github"></i> GitHub: Niod34
-    </a>
-</footer>
+        <!-- Rodapé com informações sobre o autor -->
+        <p>&copy; 2024 Saulo Gabriel | Developer</p>
+        <a href="https://github.com/Niod34" target="_blank">
+            <i class="fab fa-github"></i> GitHub: Niod34
+        </a>
+    </footer>
 </body>
 
 </html>

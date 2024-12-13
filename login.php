@@ -16,7 +16,7 @@
         <div class="img-box">
             <img src="https://svgsilh.com/svg/369784.svg" alt="Logo"> <!-- A imagem pode ser alterada por outra que preferir -->
         </div>
-        
+
         <!-- Caixa de conteúdo para o formulário -->
         <div class="content-box">
             <div class="form-box">
@@ -26,7 +26,7 @@
                     <!-- Campo de entrada para o nome de usuário (email) -->
                     <div class="input-box">
                         <span>Usuário</span>
-                        <input type="email" name="usuario" placeholder="@mail.com"  required minlength="16" required maxlength="40"> <!-- O 'required' garante que o campo seja preenchido -->
+                        <input type="email" name="usuario" placeholder="@mail.com" required minlength="16" required maxlength="40"> <!-- O 'required' garante que o campo seja preenchido -->
                     </div>
 
                     <!-- Campo de entrada para a senha -->

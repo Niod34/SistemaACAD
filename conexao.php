@@ -1,4 +1,4 @@
 <?php
-    $pdo = new PDO("mysql:dbname=acad;host=localhost:3306", "root", "cimatec");
+    $pdo = new PDO("mysql:dbname=acad;host=localhost:3306", "root", "nova_senha");
 ?>
     

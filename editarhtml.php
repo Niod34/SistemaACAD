@@ -33,7 +33,8 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
         <!-- Título da página e botão de voltar -->
         <h1>Editar/Deletar Alunos</h1>
         <a href="cadastrohtml.php">
-            <button class="a">< Voltar</button>
+            <button class="a">
+                < Voltar</button>
         </a>
     </div>
 
@@ -86,7 +87,7 @@ $alunos = $sql->fetchAll(PDO::FETCH_ASSOC); // Armazena todos os alunos encontra
             </table>
         </div>
     </main>
-    
+
 </body>
 
 </html>
